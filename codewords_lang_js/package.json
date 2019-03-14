@@ -1,0 +1,27 @@
+{
+  "name": "codewords_lang_js",
+  "version": "0.0.1",
+  "description": "CodeWords support classes for editing JavaScript ES6",
+  "main": "build/codewords_lang_js.js",
+  "scripts": {
+    "test": "karma start test/karma_config.js",
+    "check": "tslint -p .",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  },
+  "author": "Google, inc.; Andrew n marshall",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gts": "^0.5.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+Copyright 2019 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+<head>
+    <title>Code Physics - A Code Words Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript" src="../../../codewords_core/build/codewords_core.js"></script>
+    <script type="text/javascript" src="../../../codewords_lang_js/build/codewords_lang_js.js"></script>
+    <script type="text/javascript" src="code_physics.js"></script>
+    <script type="text/javascript" src="third_party/matter.js"></script>
+    <script type="text/javascript" src="simplephysics.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            min-height: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-family: sans-serif;
+            background-color: white;
+        }
+        html, body, div, canvas {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        #header {
+            background-color: mediumblue;
+            color: whitesmoke;
+            flex-flow: row nowrap;
+            font-size: 20px;
+            padding: 4px;
+            z-index: 100;
+        }
+        #title {
+            font-weight: bold;
+            margin: 4px;
+        }
+        #buttons {
+            display: block;
+            float: right;
+        }
+        #button-run {
+
+        }
+        #button-edit {
+
+        }
+        #button.button-play {
+            background-image: url("ic_stop_white_32dp.png");
+        }
+        #content {
+            position: relative;
+            flex-grow: 100;
+        }
+        #top, #bottom {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            transition: top 0.4s;
+        }
+        #top {
+            top: -317px;
+        }
+        #bottom {
+            bottom: 0px;
+        }
+        #physics-canvas {
+            background-color: grey;
+            height: 100px;
+        }
+        #divider {
+            background-color: mediumblue;
+            height: 8px;
+        }
+        #codewords, #editor-touch-detect-overlay {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* TODO: Replace with injected style. */
+        .js_keyword {
+            color: purple;
+        }
+        .js_number {
+            color: blue;
+        }
+        .js_punctuation {
+            color: grey;
+        }
+        .js_string {
+            color: green;
+        }
+    </style>
+</head>
+<div id="header">
+    <div id="buttons">
+        <span id="button-run" class="hidden">run</span>
+        <span id="button-edit" class="hidden">edit</span>
+    </div
+    <h1 id="title">Code Physics</h1>
+</div>
+<div id="content">
+    <div id="top">
+        <canvas id="physics-canvas"></canvas>
+        <div id="divider"></div>
+    </div>
+    <div id="bottom">
+        <div id="codewords"></div>
+        <div id="editor-touch-detect-overlay"></div>
+    </div>
+</div>
+</body>
+</html>

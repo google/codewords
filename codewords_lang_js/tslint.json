@@ -1,0 +1,7 @@
+{
+  "extends": ["gts/tslint.json"],
+  "rules": {
+    "no-namespace": false,
+    "no-reference": false
+  }
+}
