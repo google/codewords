@@ -16,7 +16,7 @@
   "author": "Google, inc.; Andrew n marshall",
   "license": "UNLICENSED",
   "devDependencies": {
-    "gts": "^0.5.1",
+    "gts": "^0.9.0",
     "jasmine-core": "^2.8.0",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
