@@ -11,6 +11,8 @@
 /captures
 .externalNativeBuild
 
+package-lock.json
+
 # TODO: Figure out why Prototypes/typescript_in_webview/.gitignore is being ignored.
 Prototypes/typescript_in_webview/app/src/main/assets/test_fns.js.map
 Prototypes/typescript_in_webview/local.properties
