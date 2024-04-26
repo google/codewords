@@ -52,7 +52,7 @@ namespace CodeWords {
       document.head.appendChild(style_);
     }
 
-    container.innerHTML = CodeWords.UI.EDITOR_HTML;
+    container.innerText = CodeWords.UI.EDITOR_HTML;
     return new Editor(container.querySelector('.codewords-editor')! as HTMLElement);
   }
 }
