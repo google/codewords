@@ -76,7 +76,7 @@ namespace CodeWords.UI {
 
       // TODO: If the search context search text only changed by a small
       //       amount, save scroll state and animate snippet changes.
-      this.div_.innerHTML = '';
+      this.div_.innerText = '';
       for (const html of snippetHtml) {
         this.div_.appendChild(html);
         this.div_.insertAdjacentText('beforeend', ' ');
